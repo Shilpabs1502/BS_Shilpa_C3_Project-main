@@ -91,5 +91,13 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
     }
+
+    // Part 3- Failed Test Case
+    @Test
+    public void check_whether_item_not_exists_in_the_menu_should_throw_exception() throws itemNotFoundException{
+        assertThrows(itemNotFoundException.class,
+                ()->restaurant.findItemByName("Jeera Rice").getName());
+
+    }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
